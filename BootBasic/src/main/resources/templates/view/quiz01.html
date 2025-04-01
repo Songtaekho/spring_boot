@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <h3>이 화면에 진입할떄 SimpleVO 클래스를 화면에 출력해줍니다.</h3>
+
+    [[${vo}]]
+
+    <hr>
+
+
+    <pre>
+        SimpleVO는 생성하면 됩니다.
+        int 회원번호
+        String 이름
+        LocalDateTime 가입일
+        을 가집니다.
+
+
+
+        아래에서 회원정보확인 링크를 만들고 quiz_result?키=값 형태로
+        (회원번호와 이름)을 넘겨줍니다.
+        result페이지 에는 회원번호와 이름을 출력해주세요
+
+
+
+    </pre>
+
+    <a th:href="@{/view/quiz_result(vno=${vo.vno}, name=${vo.name})}">회원정보확인</a>
+
+</body>
+</html>

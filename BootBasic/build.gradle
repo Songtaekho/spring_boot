@@ -32,12 +32,17 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok' //롬복
 	testImplementation 'org.springframework.boot:spring-boot-starter-test' //테스트환경
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
-	
+	implementation 'javax.validation:validation-api:2.0.1.Final'
+	implementation 'org.hibernate:hibernate-validator:6.0.10.Final'
+
 	//JSP 화면으로 쓰기
 //	implementation 'org.apache.tomcat.embed:tomcat-embed-jasper:9.0.83'
 //	implementation 'javax.servlet:jstl:1.2'
 	//타임리프뷰
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	//유효성검사
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
+
 }
 
 tasks.named('test') {
