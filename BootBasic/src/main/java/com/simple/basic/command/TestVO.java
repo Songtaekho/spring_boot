@@ -2,6 +2,8 @@ package com.simple.basic.command;
 
 import lombok.*;
 
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 import java.time.LocalDateTime;
 
 @NoArgsConstructor //기본 생성자
@@ -13,14 +15,21 @@ import java.time.LocalDateTime;
 @Builder
 public class TestVO {
 
-    //단축키 alt + insert
-    
+
+    private Integer mno;
     private String id;
+    @Pattern(regexp = "[0-9]{4}")
     private String pw;
     private String name;
     private int salary;
     private String address;
     private LocalDateTime hiredate;
+    @Size(min = 5 , message = "메모는 5글자 이상입니다")
+    private String memo;
+    @Pattern(regexp = "[0-9]{3}-[0-9]{4}-[0-9]{4}" , message = "010-0000-0000 유형입니다")
+    private String phone;
+    private String secret;
+
 
 
 }

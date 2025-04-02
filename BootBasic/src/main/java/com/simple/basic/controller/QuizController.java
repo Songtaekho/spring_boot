@@ -24,6 +24,7 @@ public class QuizController {
     @GetMapping("/quiz01_result")
     public String quiz01_result() {
         return "valid/quiz01_result";
+        
     }
 
     @PostMapping("/quizForm")

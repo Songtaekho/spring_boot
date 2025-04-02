@@ -16,7 +16,8 @@ public class QuizVO {
     private String id;
 
 
-    @Pattern(regexp = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[$@$!%*?&])[A-Za-z\\d$@$!%*?&]{8,}" , message = "비밀번호는 소문자,대문자,특수문자 각 1개이상 사용하며 8자리 이상이어야합니다.")
+    @Pattern(regexp = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[$@$!%*?&])[A-Za-z\\d$@$!%*?&]{8,}"
+            , message = "비밀번호는 소문자,대문자,특수문자 각 1개이상 사용하며 8자리 이상이어야합니다.")
     private String pw;
 
 
