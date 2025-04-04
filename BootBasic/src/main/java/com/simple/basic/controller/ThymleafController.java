@@ -111,7 +111,7 @@ public class ThymleafController {
     @GetMapping("/quiz01")
     public String quiz01(Model model) {
         SimpleVO vo = new SimpleVO();
-        vo.setVno(1);
+        vo.setSno(1);
         vo.setName("홍길동");
         vo.setRegdate(LocalDateTime.now()); //오늘날짜
 
@@ -121,14 +121,14 @@ public class ThymleafController {
     }
 
     @GetMapping("/quiz_result")
-    public String quiz_result(@RequestParam int vno
+    public String quiz_result(@RequestParam int sno
             , @RequestParam String name
             , Model model) {
 
 
         SimpleVO vo = SimpleVO
                 .builder()
-                .vno(vno)
+                .sno(sno)
                 .name(name)
                 .regdate(LocalDateTime.now())
                 .build();

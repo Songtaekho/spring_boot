@@ -50,7 +50,7 @@ public class ProductController {
         //셀렉트
         String prodWriter = "admin";
         ArrayList<ProductVO> list = productService.getList(prodWriter, cri);
-        int total = productService.getTotal(prodWriter); //토탈
+        int total = productService.getTotal(prodWriter, cri); //토탈
         PageVO pageVO = new PageVO(cri, total); //페이지네이션
 
         model.addAttribute("list", list);

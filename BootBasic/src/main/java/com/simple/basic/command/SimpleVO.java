@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 @Builder
 public class SimpleVO {
 
-    private int vno;
+    private int sno;
     private String name;
     private LocalDateTime regdate;
 

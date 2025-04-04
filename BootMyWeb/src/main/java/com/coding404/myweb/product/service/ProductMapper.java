@@ -13,7 +13,8 @@ public interface ProductMapper {
     int productRegist(ProductVO vo);
     ArrayList<ProductVO> getList(@Param("prodWriter") String prodWriter
                                 ,@Param("cri") Criteria cri);
-    int getTotal(String prodWriter);
+    int getTotal(@Param("prodWriter") String prodWriter
+                ,@Param("cri") Criteria cri);
     ProductVO getDetail(String prodId);
     void productUpdate(ProductVO vo);
     int productDelete(ProductVO vo);
